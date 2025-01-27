@@ -1,3 +1,9 @@
+IFDEF __ZL__ASM__
+
+ELSE
+
+__ZL__ASM__ equ 1
+
 ;; CRTC Amstrad CPC
 
 ;; CRTC ZX Spectrum
@@ -11,7 +17,7 @@ module CRTC_SET_VALUE
     out (CRTC_DATA), a
 
 ;; Math
-module pow
+pow
     push hl
     ex de, hl
     pop hl
@@ -25,7 +31,7 @@ loop
 done
     ret
 
-module sqrt
+sqrt
     ld a, h
     or l
     jp po, done
@@ -44,3 +50,5 @@ loop
     jp loop
 done
     ret
+
+ENDIF

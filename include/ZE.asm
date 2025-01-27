@@ -1,4 +1,6 @@
-ifndef __ZE__ASM__
+IFDEF __ZE__ASM__
+
+ELSE
 __ZE__ASM__ equ 1
 
 ;; Amstrad CPC
@@ -58,4 +60,4 @@ CRTC_STD_CONFIG_REG_XV      equ 00
 CRTC_STD_CONFIG_REG_XVI     equ 00
 CRTC_STD_CONFIG_REG_XVII    equ 00
 
-endif
+ENDIF

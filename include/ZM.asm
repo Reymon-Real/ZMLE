@@ -1,5 +1,10 @@
 ;; Macros for Z80
 
+IFDEF __ZM__ASM__
+
+ELSE
+__ZM__ASM__ equ 1
+
 ;; LDA = LEA
 macro lda dir, val
   if {dir} == sp
@@ -79,3 +84,5 @@ macro CRTC_SET_REG register, value
     ld a, {value}
     out (CRTC_DATA), a
 mend
+
+ENDIF
